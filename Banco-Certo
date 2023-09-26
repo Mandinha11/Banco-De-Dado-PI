@@ -400,3 +400,10 @@ FROM fornecedor
 RIGHT JOIN karts
 ON 
 fornecedor.cnpj = karts.fornecedor_cnpj; 
+
+ALTER TABLE funcionarios DROP PRIMARY KEY;
+
+ALTER TABLE funcionarios ADD PRIMARY KEY (cpf);
+
+ALTER TABLE funcionarios DROP COLUMN senha;
+  
